@@ -1,0 +1,15 @@
+{
+  "requiredArtifacts": 39,
+  "markdownFiles": 35,
+  "cardDefinitions": 19,
+  "retailDefinitions": 17,
+  "retailCopiesProvisional": 89,
+  "historicalCopiesReported": 95,
+  "sourceCount": 43,
+  "ruleClaims": 55,
+  "verified": 35,
+  "inferred": 7,
+  "unknown": 13,
+  "verifiedPercent": 63.6,
+  "problems": []
+}

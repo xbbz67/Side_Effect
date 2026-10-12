@@ -1,0 +1,411 @@
+{
+  "accessDate": "2026-10-12",
+  "sources": [
+    {
+      "id": "P00",
+      "title": "Current Side Effects product page",
+      "url": "https://pillboxgames.com/products/side-effects",
+      "type": "official publisher product page",
+      "proves": "89 cards, 2–8 players, 10–30 minutes, age 14+",
+      "confidence": "high",
+      "access": "read; downloaded HTML"
+    },
+    {
+      "id": "P01",
+      "title": "Official booklet image 1",
+      "url": "https://pillboxgames.com/cdn/shop/files/1.png?v=1778020768&width=900",
+      "type": "official publisher illustrated rulebook",
+      "proves": "Cover / edition context",
+      "confidence": "high",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/step-01.png"
+    },
+    {
+      "id": "P02",
+      "title": "Official booklet image 2",
+      "url": "https://pillboxgames.com/cdn/shop/files/2.png?v=1778020923&width=900",
+      "type": "official publisher illustrated rulebook",
+      "proves": "Four categories; 4 starting Disorders, 3 for 6+",
+      "confidence": "high",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/step-02.png"
+    },
+    {
+      "id": "P03",
+      "title": "Official booklet image 3",
+      "url": "https://pillboxgames.com/cdn/shop/files/3.png?v=1778020934&width=900",
+      "type": "official publisher illustrated rulebook",
+      "proves": "Uniqueness; hidden hand; discard; turn order; win; draw/play/hand limits",
+      "confidence": "high",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/step-03.png"
+    },
+    {
+      "id": "P04",
+      "title": "Official booklet image 4",
+      "url": "https://pillboxgames.com/cdn/shop/files/4.png?v=1778020951&width=900",
+      "type": "official publisher illustrated rulebook",
+      "proves": "Own Drug treatment and opponent Disorder attack",
+      "confidence": "high",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/step-04.png"
+    },
+    {
+      "id": "P05",
+      "title": "Official booklet image 5",
+      "url": "https://pillboxgames.com/cdn/shop/files/5.png?v=1778020982&width=900",
+      "type": "official publisher illustrated rulebook",
+      "proves": "Side-effect legality; no-Drug immunity; duplicate protection; Therapy removal",
+      "confidence": "high",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/step-05.png"
+    },
+    {
+      "id": "P06",
+      "title": "Official booklet image 6",
+      "url": "https://pillboxgames.com/cdn/shop/files/6.png?v=1778021000&width=900",
+      "type": "official publisher illustrated rulebook",
+      "proves": "Therapy exception, no Anorexia Drug, Episode target",
+      "confidence": "high",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/step-06.png"
+    },
+    {
+      "id": "P07",
+      "title": "Official booklet image 7",
+      "url": "https://pillboxgames.com/cdn/shop/files/7.png?v=1778021009&width=900",
+      "type": "official publisher illustrated rulebook",
+      "proves": "Episode compliance/discard; end early; reshuffle; no action cost for discarding",
+      "confidence": "high",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/step-07.png"
+    },
+    {
+      "id": "P08",
+      "title": "Official booklet image 8",
+      "url": "https://pillboxgames.com/cdn/shop/files/8.png?v=1778021129&width=900",
+      "type": "official publisher illustrated rulebook",
+      "proves": "Bargaining; turn-only play; house-rule exclusions",
+      "confidence": "high",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/step-08.png"
+    },
+    {
+      "id": "P09",
+      "title": "Official booklet image 9",
+      "url": "https://pillboxgames.com/cdn/shop/files/9.png?v=1778021160&width=900",
+      "type": "official publisher illustrated rulebook",
+      "proves": "Strategy: Madness removes attached Drugs",
+      "confidence": "high",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/step-09.png"
+    },
+    {
+      "id": "P10",
+      "title": "Official booklet image 10",
+      "url": "https://pillboxgames.com/cdn/shop/files/10.png?v=1778021175&width=900",
+      "type": "official publisher illustrated rulebook",
+      "proves": "Publisher contextual page, booklet copyright 2021",
+      "confidence": "high",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/step-10.png"
+    },
+    {
+      "id": "P11",
+      "title": "Official booklet image 11",
+      "url": "https://pillboxgames.com/cdn/shop/files/11.png?v=1778021187&width=900",
+      "type": "official publisher illustrated rulebook",
+      "proves": "Quick rules: Therapy explicitly requires untreated Disorder",
+      "confidence": "high",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/step-11.png"
+    },
+    {
+      "id": "P12",
+      "title": "Official booklet image 12",
+      "url": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "type": "official publisher illustrated rulebook",
+      "proves": "Eight Episode effects and symbol-based Drug side-effect map",
+      "confidence": "high",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/step-12.png"
+    },
+    {
+      "id": "PH01",
+      "title": "Publisher photograph 1",
+      "url": "https://pillboxgames.com/cdn/shop/files/8fc69c_75ea4c2d22574c9eaafe18003cd5cb0d_mv2_ac7ce9b2-4116-438b-b591-56f3ac7ae58a.jpg?v=1776146936&width=3840",
+      "type": "official publisher photograph",
+      "proves": "Physical visual reference; some printed card details",
+      "confidence": "high for legible visible details",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/product-01.jpg"
+    },
+    {
+      "id": "PH02",
+      "title": "Publisher photograph 2",
+      "url": "https://pillboxgames.com/cdn/shop/files/da34ab_ace2004c001142efb53b47e0c4b1d96d_mv2_bc165f23-497d-4b94-907c-ca834b959baf.jpg?v=1776146942&width=3840",
+      "type": "official publisher photograph",
+      "proves": "2024 box: 89 cards and one booklet",
+      "confidence": "high for legible visible details",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/product-02.jpg"
+    },
+    {
+      "id": "PH03",
+      "title": "Publisher photograph 3",
+      "url": "https://pillboxgames.com/cdn/shop/files/da34ab_1e8f2666c3e5409d96f6cfdc96c0059e_mv2_1e1a3f89-960a-4b49-9f1c-8e711fe7ae54.jpg?v=1776146948&width=3840",
+      "type": "official publisher photograph",
+      "proves": "Physical visual reference; some printed card details",
+      "confidence": "high for legible visible details",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/product-03.jpg"
+    },
+    {
+      "id": "PH04",
+      "title": "Publisher photograph 4",
+      "url": "https://pillboxgames.com/cdn/shop/files/8fc69c_bd3aae5a72fb4be9ac9a1d76945137fd_mv2_db78017c-db41-47a4-84c4-2dbe221394c2.jpg?v=1776146953&width=3840",
+      "type": "official publisher photograph",
+      "proves": "Physical game in progress: overlapping treatments, concealed hands, public Psyches",
+      "confidence": "high for legible visible details",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/product-04.jpg"
+    },
+    {
+      "id": "PH05",
+      "title": "Publisher photograph 5",
+      "url": "https://pillboxgames.com/cdn/shop/files/da34ab_3ec07f694a814ed69ad2707b719f076f_mv2_b75e9575-fbf5-4161-a5df-7a3da8dccaa8.jpg?v=1776146959&width=3840",
+      "type": "official publisher photograph",
+      "proves": "Physical visual reference; some printed card details",
+      "confidence": "high for legible visible details",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/product-05.jpg"
+    },
+    {
+      "id": "PH06",
+      "title": "Publisher photograph 6",
+      "url": "https://pillboxgames.com/cdn/shop/files/da34ab_1c78dec453284446b057828e00f7cf90_mv2_ad83ff5f-3478-4b83-ab5a-8ee0517dc66e.jpg?v=1776146965&width=3840",
+      "type": "official publisher photograph",
+      "proves": "Physical visual reference; some printed card details",
+      "confidence": "high for legible visible details",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/product-06.jpg"
+    },
+    {
+      "id": "PH07",
+      "title": "Publisher photograph 7",
+      "url": "https://pillboxgames.com/cdn/shop/files/file_b2da34fd-4f47-4cb7-8ff3-9baa30c5ff9f.jpg?v=1776146971&width=3840",
+      "type": "official publisher photograph",
+      "proves": "Physical visual reference; some printed card details",
+      "confidence": "high for legible visible details",
+      "access": "downloaded and visually inspected",
+      "localPath": "evidence/product-07.jpg"
+    },
+    {
+      "id": "B01",
+      "title": "BGG 230765 community inventory",
+      "url": "https://boardgamegeek.com/boardgame/230765/side-effects",
+      "type": "community database/wiki",
+      "proves": "Historical 95-card counts, reported ingredients, best 5–6",
+      "confidence": "medium",
+      "access": "search-indexed full inventory read; direct fetch failed"
+    },
+    {
+      "id": "B02",
+      "title": "BGG strategy review and publisher replies",
+      "url": "https://boardgamegeek.com/thread/1960411/a-sick-tic-tac-toe-like-card-game-a-review-of-side",
+      "type": "review/forum, including publisher statements",
+      "proves": "Historical bonuses, Therapy strategy disagreement, 96-card publisher comment",
+      "confidence": "medium",
+      "access": "search-indexed text read"
+    },
+    {
+      "id": "B03",
+      "title": "Tremors / victory clarification",
+      "url": "https://boardgamegeek.com/thread/3623887/how-does-a-player-actually-remove-the-tremors-card",
+      "type": "community rules discussion",
+      "proves": "Treated Tremors counts for victory; retail copies lack bonus cards",
+      "confidence": "medium",
+      "access": "search-indexed thread read"
+    },
+    {
+      "id": "B04",
+      "title": "Extended player aid",
+      "url": "https://boardgamegeek.com/filepage/300393/side-effects-player-aid-extended",
+      "type": "community file listing",
+      "proves": "Discovery only; file contents NOT inspected",
+      "confidence": "none for rules",
+      "access": "direct access 403; listing found"
+    },
+    {
+      "id": "R01S",
+      "title": "Inventory discussion",
+      "url": "https://www.reddit.com/r/boardgames/comments/121cwxn/side_effects_contents/",
+      "type": "community inventory report",
+      "proves": "38 Disorders, 36 Drugs, 21 historical actions; retail excludes six bonuses",
+      "confidence": "medium",
+      "access": "read"
+    },
+    {
+      "id": "Z01",
+      "title": "Zatu: How to Play Side Effects",
+      "url": "https://zatu.com/en-us/blogs/how-to-play/how-to-play-side-effects",
+      "type": "retailer rules guide",
+      "proves": "Independent corroboration of turn/treatment/bargaining flow",
+      "confidence": "medium",
+      "access": "read; use publisher where they differ"
+    },
+    {
+      "id": "E01",
+      "title": "Booster Shot publisher description",
+      "url": "https://pillboxgames.com/products/side-effects-booster-shot?variant=48090540179691",
+      "type": "official expansion description",
+      "proves": "Current expansion special-card descriptions; excluded retail baseline",
+      "confidence": "high for expansion; not historical text",
+      "access": "read"
+    },
+    {
+      "id": "E02",
+      "title": "Publisher: How to use the Booster",
+      "url": "https://pillboxgames.com/blogs/news/the-doctor-is-in",
+      "type": "official publisher blog",
+      "proves": "Expansion mixing differs from base deck",
+      "confidence": "high",
+      "access": "read"
+    },
+    {
+      "id": "E03",
+      "title": "Publisher: Hex Effects comparison",
+      "url": "https://pillboxgames.com/blogs/news/the-hexes-are-coming-the-hexes-are-coming-may-16",
+      "type": "official publisher blog",
+      "proves": "Hex Effects changes mechanics; cannot borrow rules",
+      "confidence": "high",
+      "access": "read"
+    },
+    {
+      "id": "V01",
+      "title": "Side Effects Playthrough (with Creator Commentary)",
+      "url": "https://www.youtube.com/watch?v=tGGV8ixHG8w",
+      "type": "official publisher video; prototype 2017",
+      "proves": "Sampled physical table actions only; no audio rulings verified",
+      "confidence": "medium for visible actions, low for identities",
+      "access": "99 preview frames inspected, ~10-second intervals; captions empty"
+    },
+    {
+      "id": "V02",
+      "title": "Skytiger Gaming: unboxing / how-to / playthrough",
+      "url": "https://www.youtube.com/watch?v=vVcEQWEbTK8",
+      "type": "independent demonstration/playthrough video",
+      "proves": "Sampled two-seat card positions, treatment/removal motions, booklet consultation",
+      "confidence": "medium for visible actions",
+      "access": "147 preview frames inspected, ~10-second intervals; captions empty; current fetched title differs from listing"
+    },
+    {
+      "id": "V03",
+      "title": "Pillbox: Side Effects Strategies",
+      "url": "https://www.youtube.com/watch?v=VCLHB0ZO6G8",
+      "type": "official publisher video",
+      "proves": "Discovery only; content NOT watched",
+      "confidence": "none for rules",
+      "access": "web video fetch failed"
+    },
+    {
+      "id": "V04",
+      "title": "Jason Downey tutorial / first impressions",
+      "url": "https://www.youtube.com/watch?v=PjKj_wdNci0",
+      "type": "independent tutorial video",
+      "proves": "Discovery only; content NOT watched",
+      "confidence": "none for rules",
+      "access": "web video fetch failed"
+    },
+    {
+      "id": "T01",
+      "title": "Socket.IO delivery guarantees",
+      "url": "https://socket.io/docs/v4/delivery-guarantees/",
+      "type": "official technical documentation",
+      "proves": "Ordered messages; default at-most-once arrival; application persistence needed",
+      "confidence": "high",
+      "access": "read"
+    },
+    {
+      "id": "T02",
+      "title": "Socket.IO connection state recovery",
+      "url": "https://socket.io/docs/v4/connection-state-recovery/",
+      "type": "official technical documentation",
+      "proves": "Recovery can fail; adapter support differs; fallback resync needed",
+      "confidence": "high",
+      "access": "read"
+    },
+    {
+      "id": "T03",
+      "title": "MDN WebSocket API",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+      "type": "primary browser API documentation",
+      "proves": "Native WebSocket bidirectionality and backpressure limitation",
+      "confidence": "high",
+      "access": "read"
+    },
+    {
+      "id": "T04",
+      "title": "W3C: Animation from Interactions",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+      "type": "official accessibility guidance",
+      "proves": "Disabling nonessential motion / reduced motion",
+      "confidence": "high",
+      "access": "read"
+    },
+    {
+      "id": "T05",
+      "title": "React reducer guidance",
+      "url": "https://react.dev/learn/extracting-state-logic-into-a-reducer",
+      "type": "official React documentation",
+      "proves": "Centralized state transitions; does not itself prove network design",
+      "confidence": "high",
+      "access": "read"
+    },
+    {
+      "id": "T06",
+      "title": "Node crypto.randomInt",
+      "url": "https://nodejs.org/api/crypto.html#cryptorandomintmin-max-callback",
+      "type": "official Node documentation",
+      "proves": "Server randomness API; module choice is proposal",
+      "confidence": "high",
+      "access": "read"
+    },
+    {
+      "id": "T07",
+      "title": "Socket.IO rooms",
+      "url": "https://socket.io/docs/v4/rooms/",
+      "type": "official technical documentation",
+      "proves": "Server-side channels; not authentication or application persistence",
+      "confidence": "high",
+      "access": "read"
+    },
+    {
+      "id": "T08",
+      "title": "PostgreSQL transactions",
+      "url": "https://www.postgresql.org/docs/current/tutorial-transactions.html",
+      "type": "official database documentation",
+      "proves": "Atomic persistent transaction concept; database choice remains proposal",
+      "confidence": "high",
+      "access": "read"
+    },
+    {
+      "id": "T09",
+      "title": "Socket.IO multiple nodes",
+      "url": "https://socket.io/docs/v4/using-multiple-nodes/",
+      "type": "official technical documentation",
+      "proves": "Session routing and multi-node transport considerations",
+      "confidence": "high",
+      "access": "read"
+    },
+    {
+      "id": "T10",
+      "title": "MDN Set-Cookie",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie",
+      "type": "primary browser HTTP documentation",
+      "proves": "Session cookie attributes; deployment policy remains proposal",
+      "confidence": "high",
+      "access": "read"
+    }
+  ]
+}

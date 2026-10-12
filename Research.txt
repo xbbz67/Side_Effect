@@ -1,0 +1,1154 @@
+Requirement: Do research of side effect boardgame
+
+# SIDE EFFECTS — DEEP RESEARCH FOR ONLINE GAME IMPLEMENTATION
+
+You are a senior board-game researcher, game-system designer, multiplayer engineer, UI/UX designer, and game animation designer.
+
+Your task is to perform a COMPLETE research and reverse-engineering study of the board game:
+
+**Side Effects — by Pillbox Games**
+
+The final goal is to use your research as the specification for building a polished browser-based online multiplayer adaptation.
+
+DO NOT START IMPLEMENTING THE GAME YET.
+
+Your first job is to understand the original game extremely thoroughly.
+
+---
+
+# 1. RESEARCH SOURCES
+
+Search the web extensively.
+
+Prioritize sources in this order:
+
+1. Pillbox Games official Side Effects page
+2. Official Side Effects rulebook / instruction booklet
+3. BoardGameGeek — Side Effects (ID 230765)
+4. Official publisher videos
+5. High-quality full gameplay/playthrough videos
+6. Rules explanation videos
+7. BoardGameGeek forums/files/player aids
+8. Reviews showing actual gameplay
+9. Images of real physical games in progress
+
+Use multiple independent sources whenever possible.
+
+For videos, DO NOT only read the title or description.
+
+Study the gameplay chronologically and record:
+
+- what players physically do,
+- which cards move,
+- where cards move,
+- when players make decisions,
+- what information is hidden,
+- what information is public,
+- player reactions,
+- timing of attacks,
+- timing of responses,
+- ambiguous rules,
+- uncommon situations,
+- end-of-game situations.
+
+Clearly distinguish:
+
+**VERIFIED RULE**
+
+from
+
+**INFERRED BEHAVIOR**
+
+from
+
+**PROPOSED DIGITAL UX**
+
+Never silently invent a rule.
+
+If sources disagree, document the disagreement.
+
+---
+
+# 2. UNDERSTAND THE PHYSICAL GAME
+
+Document the complete physical game.
+
+Research:
+
+- player count
+- recommended player count
+- game duration
+- complete card count
+- complete card categories
+- number of cards in each category
+- setup
+- starting hand
+- starting Disorders
+- deck construction
+- discard pile
+- public information
+- hidden information
+- win condition
+- loss conditions if any
+
+Create a card taxonomy.
+
+For example:
+
+Disorder  
+Drug  
+Therapy  
+Episode  
+Other/special cards
+
+For EACH category describe:
+
+- purpose
+- timing
+- target
+- requirements
+- effect
+- duration
+- whether persistent or instant
+- where the card goes after use
+- whether another card can respond to it
+- edge cases
+
+---
+
+# 3. COMPLETE CARD DATABASE
+
+Research every known card in the base game.
+
+Create:
+
+`research/cards.md`
+
+and
+
+`research/cards.json`
+
+Suggested JSON structure:
+
+```json
+{
+  "id": "",
+  "name": "",
+  "type": "",
+  "description": "",
+  "effect": "",
+  "targets": [],
+  "requirements": [],
+  "sideEffects": [],
+  "episodeEffect": "",
+  "persistent": false,
+  "source": "",
+  "verification": "verified | inferred | unknown"
+}
+```
+
+DO NOT guess missing card text.
+
+Mark incomplete information as:
+
+`UNKNOWN — NEEDS VERIFICATION`
+
+Research relationships between cards.
+
+Especially:
+
+Disorder → valid Drugs
+
+Drug → Disorders treated
+
+Drug → possible Side Effects
+
+Disorder → Episode effect
+
+Therapy → Disorders affected
+
+Special interaction → special interaction
+
+Generate an interaction matrix if useful.
+
+---
+
+# 4. RECONSTRUCT THE EXACT GAME LOOP
+
+Determine precisely what happens during one player's turn.
+
+Express the turn as a finite state machine.
+
+Example ONLY:
+
+```text
+TURN_START
+↓
+DRAW / ACTION SELECTION
+↓
+SELECT_CARD
+↓
+SELECT_TARGET
+↓
+VALIDATE_ACTION
+↓
+RESOLVE_EFFECT
+↓
+OPTIONAL_RESPONSE
+↓
+RESOLVE_RESPONSE
+↓
+UPDATE_PSYCHE
+↓
+CHECK_WIN
+↓
+TURN_END
+```
+
+Do not assume this structure is correct.
+
+Research the real one.
+
+Document:
+
+- mandatory actions
+- optional actions
+- number of cards/actions permitted
+- draw timing
+- discard timing
+- attack timing
+- Episode timing
+- Therapy timing
+- Drug timing
+- side-effect timing
+- newly acquired Disorder timing
+- hand limits
+- turn ending conditions
+- victory check timing
+
+Create:
+
+`research/game-loop.md`
+
+---
+
+# 5. PSYCHE SYSTEM
+
+Side Effects revolves around the player's **Psyche**.
+
+Research exactly how it behaves.
+
+Determine:
+
+- initial Psyche
+- maximum/minimum Disorders
+- treated Disorder representation
+- whether treated Disorders remain visible
+- Drug attachment behavior
+- Therapy behavior
+- adding new Disorders
+- duplicate Disorders
+- Side Effect vulnerabilities
+- Episode effects
+- whether cured Disorders can return
+- ordering of cards
+- whether cards can stack
+
+Create a clear state model such as:
+
+```text
+Player
+ ├─ Hand
+ ├─ Psyche
+ │   ├─ Disorder
+ │   │   ├─ treatment
+ │   │   ├─ active/inactive
+ │   │   └─ episode state
+ │   └─ ...
+ ├─ Active effects
+ └─ Status
+```
+
+Only keep structures supported by actual gameplay.
+
+---
+
+# 6. ATTACK / INTERACTION SYSTEM
+
+This game is highly interactive.
+
+Analyze every type of player-to-player interaction.
+
+For each one determine:
+
+### Initiator
+
+Who may initiate it?
+
+### Target
+
+Who may be targeted?
+
+### Timing
+
+When is targeting allowed?
+
+### Selection
+
+What does the player select?
+
+### Validation
+
+What makes the action legal?
+
+### Response
+
+Can the victim respond?
+
+### Resolution
+
+What happens?
+
+### Animation
+
+How should the digital game communicate it?
+
+Example interaction flow:
+
+```text
+Player A selects card
+→ legal targets glow
+→ Player A selects Player B
+→ attack card leaves hand
+→ card travels toward Player B
+→ target preview appears
+→ Player B receives effect
+→ Psyche updates
+→ status animation
+→ action log updates
+→ next gameplay state
+```
+
+This is a UX proposal, NOT a rule.
+
+Separate gameplay logic from presentation.
+
+---
+
+# 7. EDGE CASE RESEARCH
+
+This section is extremely important.
+
+Try to identify every edge case.
+
+Examples:
+
+- empty draw pile
+- no legal action
+- two effects conflict
+- player receives duplicate Disorder
+- Drug has multiple Side Effects
+- Disorder already treated
+- Episode played against treated Disorder
+- Therapy interaction
+- invalid target
+- player leaves game
+- disconnect during card selection
+- disconnect while being attacked
+- victory triggered during another player's action
+- simultaneous triggers
+- last card in deck
+- 2-player special behavior
+- 8-player behavior
+- effects that alter hand size
+- effects that change targeting
+- effects that change turn order
+
+For every edge case label:
+
+VERIFIED  
+INFERRED  
+DIGITAL-ONLY
+
+---
+
+# 8. WATCH REAL GAMEPLAY FOR UX
+
+Find multiple Side Effects gameplay videos.
+
+Study them like a game designer.
+
+Create a chronological gameplay observation table:
+
+| Time | Player action | Physical action | Rule involved | Digital equivalent |
+|------|------|------|------|------|
+
+Look specifically for repetitive physical motions.
+
+For example:
+
+- draw card
+- fan hand
+- choose card
+- reveal card
+- point at opponent
+- attach Drug to Disorder
+- add Disorder to Psyche
+- trigger Episode
+- discard card
+- check side effects
+- reorganize Psyche
+
+These physical actions should inspire digital animations.
+
+---
+
+# 9. ONLINE TABLE LAYOUT
+
+Design the game for:
+
+**Desktop first**
+
+Target:
+
+1920×1080
+
+Support:
+
+2–8 players.
+
+The player must always understand:
+
+- whose turn it is
+- their hand
+- their Psyche
+- opponents' Psyches
+- treated Disorders
+- Drugs
+- active Side Effects
+- deck
+- discard pile
+- action history
+- current pending action
+- selectable targets
+
+Create layout proposals for:
+
+2 players  
+3–4 players  
+5–6 players  
+7–8 players
+
+Do NOT simply shrink everything.
+
+Design adaptive seating arrangements.
+
+Possible concept:
+
+```text
+            Player 4
+
+ Player 3              Player 5
+
+      DRAW   DISCARD
+
+          TABLE
+
+      CURRENT ACTION
+
+ Player 2              Player 6
+
+          YOU
+        YOUR HAND
+```
+
+This is only inspiration.
+
+Find the best layout.
+
+---
+
+# 10. CARD INTERACTION UX
+
+Define EXACT interaction behavior.
+
+Research/propose:
+
+### Hover
+
+- elevate card
+- slight scale
+- show readable version
+- show legal targets
+
+### Click
+
+First click:
+
+select card
+
+Second click:
+
+confirm / target
+
+### Drag
+
+Determine whether drag-and-drop improves gameplay.
+
+Do not force dragging if click interaction is better.
+
+### Invalid action
+
+Use:
+
+- subtle shake
+- invalid cursor
+- short explanation
+
+Never silently reject the user.
+
+---
+
+# 11. ANIMATION RESEARCH
+
+Create:
+
+`research/animation-spec.md`
+
+Animations must make GAME STATE easier to understand.
+
+Avoid animations that exist only for decoration.
+
+Research and specify animations for:
+
+### Draw card
+
+Deck top card lifts.
+
+Card travels toward player's hand.
+
+Card rotates toward the owner.
+
+Other players only see card back.
+
+Duration approximately:
+
+350–600 ms.
+
+### Play card
+
+Selected card rises.
+
+Other cards create space.
+
+Card travels to center table.
+
+Card enlarges briefly.
+
+Effect resolves.
+
+Then moves to destination/discard.
+
+### Drug treatment
+
+Drug moves from hand.
+
+Target Disorder highlights.
+
+Drug connects/attaches visually.
+
+Disorder changes state to treated.
+
+Suggested feedback:
+
+- soft glow
+- treatment icon
+- connection line
+- state transition
+
+### New Disorder
+
+Card travels toward victim.
+
+Victim's Psyche creates a slot.
+
+Card flips face-up.
+
+Impact pulse.
+
+### Episode
+
+Should feel dangerous.
+
+Possible sequence:
+
+1. Episode card hits center.
+2. Screen/table darkens slightly.
+3. Target Disorder highlights.
+4. Episode effect text appears.
+5. Effect resolves.
+6. Disorder pulses/shakes.
+7. game continues.
+
+### Therapy
+
+Visually distinct from Drug.
+
+Potential calmer animation language.
+
+### Attack
+
+Show directionality clearly.
+
+Attacker → target.
+
+### Win
+
+Do not instantly replace the table.
+
+Show final treatment.
+
+Pause.
+
+Detect victory.
+
+Then celebration/result overlay.
+
+---
+
+# 12. MOTION DESIGN SYSTEM
+
+Define reusable animation primitives:
+
+```text
+CARD_DRAW
+CARD_PLAY
+CARD_TARGET
+CARD_ATTACK
+CARD_ATTACH
+CARD_DISCARD
+CARD_FLIP
+CARD_REVEAL
+CARD_SHAKE
+CARD_PULSE
+TARGET_GLOW
+PLAYER_HIT
+STATUS_APPLY
+STATUS_REMOVE
+TURN_TRANSITION
+WIN_SEQUENCE
+```
+
+For each specify:
+
+- trigger
+- start state
+- end state
+- duration
+- easing
+- interruptibility
+- queue behavior
+- multiplayer synchronization requirements
+
+Create an animation queue model.
+
+Example:
+
+```text
+Game event
+↓
+server confirms
+↓
+client receives event
+↓
+animation queue
+↓
+animation
+↓
+visual state commit
+```
+
+Gameplay state must NEVER depend on whether an animation finished successfully.
+
+Server state is authoritative.
+
+---
+
+# 13. GAME FEEL
+
+Analyze how to make actions satisfying.
+
+Research:
+
+- card lift
+- card tilt
+- spring movement
+- subtle shadows
+- card fan movement
+- target glow
+- impact animations
+- screen shake — extremely limited
+- hover sound
+- card placement sound
+- draw sound
+- treatment sound
+- Episode impact sound
+
+Do not overanimate.
+
+The game should remain readable and fast.
+
+Provide recommended:
+
+duration  
+easing  
+delay  
+stagger  
+priority
+
+for each animation.
+
+---
+
+# 14. INFORMATION VISIBILITY
+
+Create an information visibility matrix:
+
+| Data | Owner | Opponents | Spectators |
+|---|---|---|---|
+| Hand card identity | yes | no | ? |
+| Hand size | yes | yes | ? |
+| Psyche | yes | yes | ? |
+| Treatments | yes | yes | ? |
+| Draw deck count | yes | yes | ? |
+
+Verify each rule.
+
+This matrix will later determine server security.
+
+Never send hidden card identities to unauthorized clients.
+
+---
+
+# 15. MULTIPLAYER ARCHITECTURE RESEARCH
+
+The future implementation will support:
+
+- create room
+- room code
+- invitation URL
+- no login required initially
+- 2–8 players
+- reconnect
+- host
+- ready state
+- rematch
+
+Research the best architecture.
+
+Suggested direction:
+
+Frontend:
+
+React / TypeScript
+
+Backend:
+
+Node.js / TypeScript
+
+Realtime:
+
+WebSocket / Socket.IO
+
+But evaluate rather than blindly accepting these choices.
+
+Server should be authoritative.
+
+Client sends intent:
+
+```text
+PLAY_CARD
+SELECT_TARGET
+DRAW_CARD
+END_TURN
+```
+
+Server validates.
+
+Server produces events:
+
+```text
+CARD_PLAYED
+DISORDER_ADDED
+DISORDER_TREATED
+EPISODE_TRIGGERED
+CARD_DRAWN
+TURN_CHANGED
+GAME_WON
+```
+
+Clients render events.
+
+---
+
+# 16. GAME ENGINE DESIGN
+
+Gameplay logic must be independent from UI.
+
+Desired architecture:
+
+```text
+/game-engine
+    cards
+    effects
+    validation
+    reducer
+    turn-manager
+    win-condition
+    targeting
+
+/server
+    rooms
+    websocket
+    player-session
+
+/client
+    table
+    cards
+    animations
+    hud
+    lobby
+```
+
+Research whether a reducer/event architecture is suitable.
+
+The same engine should eventually support:
+
+- human players
+- bots
+- automated tests
+- simulations
+- replay
+- reconnect
+- spectator mode
+
+---
+
+# 17. EVENT LOG
+
+Design a structured event system.
+
+Example:
+
+```json
+{
+  "type": "DISORDER_ADDED",
+  "sourcePlayer": "P1",
+  "targetPlayer": "P3",
+  "cardId": "disorder_x",
+  "reason": "drug_side_effect"
+}
+```
+
+Every visible animation should preferably originate from a game event.
+
+This allows:
+
+- replay
+- debugging
+- reconnect
+- spectator mode
+- bot testing
+- deterministic QA
+
+---
+
+# 18. BOT-READINESS
+
+Do not implement bots yet.
+
+But ensure the engine exposes:
+
+```text
+getLegalActions(state, player)
+applyAction(state, action)
+evaluateState(state, player)
+```
+
+This will allow future bots to play without interacting with the UI.
+
+---
+
+# 19. GAMEPLAY TESTING PLAN
+
+Create test scenarios.
+
+At minimum:
+
+### Setup
+
+2 players  
+3 players  
+4 players  
+8 players
+
+### Disorders
+
+add Disorder  
+treat Disorder  
+trigger Episode  
+multiple Disorders
+
+### Drugs
+
+valid Drug  
+invalid Drug  
+Drug side effect  
+multiple valid targets
+
+### Therapy
+
+every Therapy interaction
+
+### Turns
+
+legal action  
+illegal action  
+turn transition
+
+### Victory
+
+normal victory  
+victory after treatment  
+victory during chained resolution
+
+### Multiplayer
+
+disconnect  
+reconnect  
+refresh browser  
+host disconnect  
+double click  
+duplicate request  
+network lag
+
+---
+
+# 20. COPYRIGHT / ASSET SEPARATION
+
+We are researching gameplay systems.
+
+Do not assume original artwork can be distributed.
+
+Keep:
+
+GAME LOGIC
+
+separate from:
+
+CONTENT DATA
+
+separate from:
+
+VISUAL ASSETS.
+
+Use placeholder assets during development unless licensed assets are provided.
+
+Create an asset mapping system so visuals can later be replaced without changing gameplay code.
+
+Example:
+
+```json
+{
+  "cardId": "depression",
+  "frontAsset": "/assets/cards/depression.webp",
+  "backAsset": "/assets/cards/back.webp"
+}
+```
+
+---
+
+# 21. RESEARCH OUTPUT STRUCTURE
+
+Create:
+
+```text
+/research
+    README.md
+    sources.md
+
+    rules/
+        complete-rules.md
+        setup.md
+        turn-structure.md
+        win-condition.md
+        edge-cases.md
+
+    cards/
+        card-taxonomy.md
+        cards.md
+        cards.json
+        interactions.md
+
+    gameplay/
+        game-loop.md
+        state-machine.md
+        targeting.md
+        psyche-system.md
+        event-system.md
+
+    ux/
+        table-layout.md
+        interaction-spec.md
+        animation-spec.md
+        responsive-layout.md
+        sound-spec.md
+
+    multiplayer/
+        architecture.md
+        room-flow.md
+        reconnect.md
+        information-security.md
+
+    testing/
+        gameplay-tests.md
+        multiplayer-tests.md
+
+    implementation-plan.md
+```
+
+---
+
+# 22. SOURCES.MD
+
+This is mandatory.
+
+For every meaningful rule record:
+
+- source
+- source URL
+- source type
+- what information it proves
+- confidence
+
+Example:
+
+```text
+RULE:
+Players begin with four Disorders.
+
+SOURCE:
+Official Pillbox Games rules.
+
+CONFIDENCE:
+HIGH
+```
+
+For video evidence include timestamp whenever possible.
+
+Example:
+
+```text
+SOURCE:
+[video]
+
+TIMESTAMP:
+08:14–08:31
+
+OBSERVATION:
+Player plays Drug X on Disorder Y and places the Drug underneath the Disorder.
+```
+
+---
+
+# 23. UNKNOWN RULES
+
+Create a final table:
+
+| Question | Current understanding | Confidence | Need verification |
+|---|---|---:|---|
+
+Do NOT hide uncertainties.
+
+This file is important because we will resolve unanswered rules before coding.
+
+---
+
+# 24. IMPLEMENTATION PLAN
+
+ONLY after completing the research, create:
+
+`research/implementation-plan.md`
+
+Break development into:
+
+PHASE 0 — Verified rules database
+
+PHASE 1 — Headless game engine
+
+PHASE 2 — Automated engine tests
+
+PHASE 3 — Basic local UI
+
+PHASE 4 — Full card interactions
+
+PHASE 5 — Animation system
+
+PHASE 6 — Online rooms
+
+PHASE 7 — Reconnect + state recovery
+
+PHASE 8 — Game logs + replay
+
+PHASE 9 — Bots
+
+PHASE 10 — Polish, sound and final UX
+
+For every phase specify:
+
+- objectives
+- files/modules
+- dependencies
+- tests
+- definition of done
+
+---
+
+# 25. MOST IMPORTANT REQUIREMENTS
+
+Do not rush.
+
+Do not begin writing production game code simply because the basic rules look easy.
+
+Side Effects contains card-to-card interactions, targeting rules, side effects and timing behavior that must be modeled correctly before implementation.
+
+The research must be sufficiently detailed that another developer who has NEVER played Side Effects could implement the game correctly from these documents.
+
+Prioritize:
+
+1. RULE ACCURACY
+2. CARD INTERACTION ACCURACY
+3. COMPLETE STATE MODEL
+4. EDGE CASES
+5. MULTIPLAYER SYNCHRONIZATION
+6. GAMEPLAY READABILITY
+7. ANIMATION QUALITY
+8. VISUAL POLISH
+
+When the research is complete, finish with:
+
+# RESEARCH VERDICT
+
+Include:
+
+- percentage of rules confidently verified
+- unresolved rules
+- missing card information
+- best sources found
+- recommended architecture
+- biggest implementation risks
+- what MUST be resolved before coding
+
+Then STOP.
+
+Do not implement the game until explicitly instructed.

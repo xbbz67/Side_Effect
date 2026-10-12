@@ -1,0 +1,1154 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-10-12",
+  "baseline": "retail_base_89_provisional",
+  "status": "research_data_not_production_ready",
+  "textPolicy": "Descriptions/effects are functional paraphrases. cardText:null means UNKNOWN — NEEDS VERIFICATION. Empty known arrays mean no effect, null arrays mean unknown.",
+  "counts": {
+    "retailTotalVerified": 89,
+    "retailDefinitionCount": 17,
+    "historicalTotalReported": 95,
+    "historicalDefinitionCount": 19,
+    "retailCategoryCountsVerification": "inferred"
+  },
+  "cards": [
+    {
+      "id": "madness",
+      "name": "Madness",
+      "type": "disorder",
+      "edition": "retail_base_89_provisional",
+      "description": "Public Psyche condition; a hand copy can be used for a vulnerability attack.",
+      "effect": "Add this Disorder to an eligible opponent's Psyche.",
+      "targets": [
+        "opponent_player"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "target_has_attached_drug_listing_this_disorder",
+        "target_psyche_lacks_this_name"
+      ],
+      "sideEffects": [],
+      "episodeEffect": "Remove every Drug currently attached in the victim's Psyche.",
+      "episode": {
+        "kind": "remove_all_attached_drugs",
+        "verification": "verified",
+        "timingVerification": "inferred"
+      },
+      "persistent": true,
+      "destination": "target_psyche",
+      "treatments": [
+        "drug_madness",
+        "therapy"
+      ],
+      "therapyAllowed": true,
+      "copies": {
+        "historical95": 4,
+        "historicalVerification": "inferred",
+        "retail89": 4,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text in selected retail printing"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P12",
+        "P04",
+        "P05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R28",
+        "R17",
+        "R19"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "episodeEffect": "verified",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "drug_madness",
+      "name": "Madness Treatment",
+      "type": "drug",
+      "edition": "retail_base_89_provisional",
+      "description": "Matching treatment with persistent side-effect vulnerabilities.",
+      "effect": "Treat Madness by attaching above its Disorder card.",
+      "targets": [
+        "own_matching_disorder"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "own_psyche_contains_matching_disorder"
+      ],
+      "sideEffects": [
+        "tremors"
+      ],
+      "episodeEffect": null,
+      "persistent": true,
+      "destination": "attached_to_own_disorder",
+      "treats": [
+        "madness"
+      ],
+      "ingredientReportedInHistoricalWiki": "Chlorpromazine",
+      "ingredientNote": "Secondary historical spelling preserved as reported; not a verified retail label or medical claim.",
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text and ingredient spelling in selected printing",
+        "UNKNOWN — NEEDS VERIFICATION: stacking prohibition / already-treated target"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P04",
+        "P12",
+        "PH05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R15",
+        "R16",
+        "R28"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "sideEffects": "verified",
+        "ingredient": "inferred",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "suicidal_thoughts",
+      "name": "Suicidal Thoughts",
+      "type": "disorder",
+      "edition": "retail_base_89_provisional",
+      "description": "Public Psyche condition; a hand copy can be used for a vulnerability attack.",
+      "effect": "Add this Disorder to an eligible opponent's Psyche.",
+      "targets": [
+        "opponent_player"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "target_has_attached_drug_listing_this_disorder",
+        "target_psyche_lacks_this_name"
+      ],
+      "sideEffects": [],
+      "episodeEffect": "Victim discards all cards in their hand.",
+      "episode": {
+        "kind": "discard_entire_hand",
+        "verification": "verified",
+        "timingVerification": "inferred"
+      },
+      "persistent": true,
+      "destination": "target_psyche",
+      "treatments": [
+        "drug_suicidal_thoughts",
+        "therapy"
+      ],
+      "therapyAllowed": true,
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text in selected retail printing"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P12",
+        "P04",
+        "P05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R29",
+        "R17",
+        "R19"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "episodeEffect": "verified",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "drug_suicidal_thoughts",
+      "name": "Suicidal Thoughts Treatment",
+      "type": "drug",
+      "edition": "retail_base_89_provisional",
+      "description": "Matching treatment with persistent side-effect vulnerabilities.",
+      "effect": "Treat Suicidal Thoughts by attaching above its Disorder card.",
+      "targets": [
+        "own_matching_disorder"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "own_psyche_contains_matching_disorder"
+      ],
+      "sideEffects": [
+        "madness"
+      ],
+      "episodeEffect": null,
+      "persistent": true,
+      "destination": "attached_to_own_disorder",
+      "treats": [
+        "suicidal_thoughts"
+      ],
+      "ingredientReportedInHistoricalWiki": "Clozapine",
+      "ingredientNote": "Secondary historical spelling preserved as reported; not a verified retail label or medical claim.",
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text and ingredient spelling in selected printing",
+        "UNKNOWN — NEEDS VERIFICATION: stacking prohibition / already-treated target"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P04",
+        "P12",
+        "PH05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R15",
+        "R16",
+        "R29"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "sideEffects": "verified",
+        "ingredient": "inferred",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "depression",
+      "name": "Depression",
+      "type": "disorder",
+      "edition": "retail_base_89_provisional",
+      "description": "Public Psyche condition; a hand copy can be used for a vulnerability attack.",
+      "effect": "Add this Disorder to an eligible opponent's Psyche.",
+      "targets": [
+        "opponent_player"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "target_has_attached_drug_listing_this_disorder",
+        "target_psyche_lacks_this_name"
+      ],
+      "sideEffects": [],
+      "episodeEffect": "Victim sits out one round; exact turn scheduling needs a ruling.",
+      "episode": {
+        "kind": "skip_round",
+        "verification": "verified",
+        "timingVerification": "unknown"
+      },
+      "persistent": true,
+      "destination": "target_psyche",
+      "treatments": [
+        "drug_depression",
+        "therapy"
+      ],
+      "therapyAllowed": true,
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text in selected retail printing",
+        "UNKNOWN — NEEDS VERIFICATION: expiry, stacking, curing-source behavior"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P12",
+        "P04",
+        "P05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R30",
+        "R17",
+        "R19"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "episodeEffect": "verified",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "drug_depression",
+      "name": "Depression Treatment",
+      "type": "drug",
+      "edition": "retail_base_89_provisional",
+      "description": "Matching treatment with persistent side-effect vulnerabilities.",
+      "effect": "Treat Depression by attaching above its Disorder card.",
+      "targets": [
+        "own_matching_disorder"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "own_psyche_contains_matching_disorder"
+      ],
+      "sideEffects": [
+        "suicidal_thoughts",
+        "impotence",
+        "anorexia"
+      ],
+      "episodeEffect": null,
+      "persistent": true,
+      "destination": "attached_to_own_disorder",
+      "treats": [
+        "depression"
+      ],
+      "ingredientReportedInHistoricalWiki": "Fluoxetine",
+      "ingredientNote": "Secondary historical spelling preserved as reported; not a verified retail label or medical claim.",
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text and ingredient spelling in selected printing",
+        "UNKNOWN — NEEDS VERIFICATION: stacking prohibition / already-treated target"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P04",
+        "P12",
+        "PH05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R15",
+        "R16",
+        "R30"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "sideEffects": "verified",
+        "ingredient": "inferred",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "tremors",
+      "name": "Tremors",
+      "type": "disorder",
+      "edition": "retail_base_89_provisional",
+      "description": "Public Psyche condition; a hand copy can be used for a vulnerability attack.",
+      "effect": "Add this Disorder to an eligible opponent's Psyche.",
+      "targets": [
+        "opponent_player"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "target_has_attached_drug_listing_this_disorder",
+        "target_psyche_lacks_this_name"
+      ],
+      "sideEffects": [],
+      "episodeEffect": "Victim has three seconds to discard three cards; otherwise their whole hand is lost.",
+      "episode": {
+        "kind": "timed_discard",
+        "verification": "verified",
+        "timingVerification": "unknown"
+      },
+      "persistent": true,
+      "destination": "target_psyche",
+      "treatments": [
+        "drug_tremors"
+      ],
+      "therapyAllowed": false,
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text in selected retail printing",
+        "UNKNOWN — NEEDS VERIFICATION: timer start and short-hand behavior"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P12",
+        "P04",
+        "P05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R31",
+        "R17",
+        "R19"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "episodeEffect": "verified",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "drug_tremors",
+      "name": "Tremors Treatment",
+      "type": "drug",
+      "edition": "retail_base_89_provisional",
+      "description": "Matching treatment with persistent side-effect vulnerabilities.",
+      "effect": "Treat Tremors by attaching above its Disorder card.",
+      "targets": [
+        "own_matching_disorder"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "own_psyche_contains_matching_disorder"
+      ],
+      "sideEffects": [
+        "gambling_addiction",
+        "depression",
+        "madness"
+      ],
+      "episodeEffect": null,
+      "persistent": true,
+      "destination": "attached_to_own_disorder",
+      "treats": [
+        "tremors"
+      ],
+      "ingredientReportedInHistoricalWiki": "Pramiprexole",
+      "ingredientNote": "Secondary historical spelling preserved as reported; not a verified retail label or medical claim.",
+      "copies": {
+        "historical95": 6,
+        "historicalVerification": "inferred",
+        "retail89": 6,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text and ingredient spelling in selected printing",
+        "UNKNOWN — NEEDS VERIFICATION: stacking prohibition / already-treated target"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P04",
+        "P12",
+        "PH05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R15",
+        "R16",
+        "R31"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "sideEffects": "verified",
+        "ingredient": "inferred",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "gambling_addiction",
+      "name": "Gambling Addiction",
+      "type": "disorder",
+      "edition": "retail_base_89_provisional",
+      "description": "Public Psyche condition; a hand copy can be used for a vulnerability attack.",
+      "effect": "Add this Disorder to an eligible opponent's Psyche.",
+      "targets": [
+        "opponent_player"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "target_has_attached_drug_listing_this_disorder",
+        "target_psyche_lacks_this_name"
+      ],
+      "sideEffects": [],
+      "episodeEffect": "Inflictor may take three random cards from the victim's hand.",
+      "episode": {
+        "kind": "random_hand_theft",
+        "verification": "verified",
+        "timingVerification": "unknown"
+      },
+      "persistent": true,
+      "destination": "target_psyche",
+      "treatments": [
+        "drug_gambling_addiction",
+        "therapy"
+      ],
+      "therapyAllowed": true,
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text in selected retail printing",
+        "UNKNOWN — NEEDS VERIFICATION: short-hand behavior and optional transfer count"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P12",
+        "P04",
+        "P05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R32",
+        "R17",
+        "R19"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "episodeEffect": "verified",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "drug_gambling_addiction",
+      "name": "Gambling Addiction Treatment",
+      "type": "drug",
+      "edition": "retail_base_89_provisional",
+      "description": "Matching treatment with persistent side-effect vulnerabilities.",
+      "effect": "Treat Gambling Addiction by attaching above its Disorder card.",
+      "targets": [
+        "own_matching_disorder"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "own_psyche_contains_matching_disorder"
+      ],
+      "sideEffects": [
+        "impotence"
+      ],
+      "episodeEffect": null,
+      "persistent": true,
+      "destination": "attached_to_own_disorder",
+      "treats": [
+        "gambling_addiction"
+      ],
+      "ingredientReportedInHistoricalWiki": "Lithium",
+      "ingredientNote": "Secondary historical spelling preserved as reported; not a verified retail label or medical claim.",
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text and ingredient spelling in selected printing",
+        "UNKNOWN — NEEDS VERIFICATION: stacking prohibition / already-treated target"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P04",
+        "P12",
+        "PH05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R15",
+        "R16",
+        "R32"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "sideEffects": "verified",
+        "ingredient": "inferred",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "anxiety",
+      "name": "Anxiety",
+      "type": "disorder",
+      "edition": "retail_base_89_provisional",
+      "description": "Public Psyche condition; a hand copy can be used for a vulnerability attack.",
+      "effect": "Add this Disorder to an eligible opponent's Psyche.",
+      "targets": [
+        "opponent_player"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "target_has_attached_drug_listing_this_disorder",
+        "target_psyche_lacks_this_name"
+      ],
+      "sideEffects": [],
+      "episodeEffect": "Victim shows their hand to the inflictor, who may take one card.",
+      "episode": {
+        "kind": "reveal_hand_optional_theft",
+        "verification": "verified",
+        "timingVerification": "inferred"
+      },
+      "persistent": true,
+      "destination": "target_psyche",
+      "treatments": [
+        "drug_anxiety",
+        "therapy"
+      ],
+      "therapyAllowed": true,
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text in selected retail printing"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P12",
+        "P04",
+        "P05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R33",
+        "R17",
+        "R19"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "episodeEffect": "verified",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "drug_anxiety",
+      "name": "Anxiety Treatment",
+      "type": "drug",
+      "edition": "retail_base_89_provisional",
+      "description": "Matching treatment with persistent side-effect vulnerabilities.",
+      "effect": "Treat Anxiety by attaching above its Disorder card.",
+      "targets": [
+        "own_matching_disorder"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "own_psyche_contains_matching_disorder"
+      ],
+      "sideEffects": [
+        "suicidal_thoughts",
+        "depression",
+        "madness"
+      ],
+      "episodeEffect": null,
+      "persistent": true,
+      "destination": "attached_to_own_disorder",
+      "treats": [
+        "anxiety"
+      ],
+      "ingredientReportedInHistoricalWiki": "Lorazapam",
+      "ingredientNote": "Secondary historical spelling preserved as reported; not a verified retail label or medical claim.",
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text and ingredient spelling in selected printing",
+        "UNKNOWN — NEEDS VERIFICATION: stacking prohibition / already-treated target"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P04",
+        "P12",
+        "PH05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R15",
+        "R16",
+        "R33"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "sideEffects": "verified",
+        "ingredient": "inferred",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "impotence",
+      "name": "Impotence",
+      "type": "disorder",
+      "edition": "retail_base_89_provisional",
+      "description": "Public Psyche condition; a hand copy can be used for a vulnerability attack.",
+      "effect": "Add this Disorder to an eligible opponent's Psyche.",
+      "targets": [
+        "opponent_player"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "target_has_attached_drug_listing_this_disorder",
+        "target_psyche_lacks_this_name"
+      ],
+      "sideEffects": [],
+      "episodeEffect": "Victim cannot put cards into play for one round.",
+      "episode": {
+        "kind": "block_play_round",
+        "verification": "verified",
+        "timingVerification": "unknown"
+      },
+      "persistent": true,
+      "destination": "target_psyche",
+      "treatments": [
+        "drug_impotence",
+        "therapy"
+      ],
+      "therapyAllowed": true,
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text in selected retail printing",
+        "UNKNOWN — NEEDS VERIFICATION: expiry, stacking, curing-source behavior"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P12",
+        "P04",
+        "P05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R34",
+        "R17",
+        "R19"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "episodeEffect": "verified",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "drug_impotence",
+      "name": "Impotence Treatment",
+      "type": "drug",
+      "edition": "retail_base_89_provisional",
+      "description": "Matching treatment with persistent side-effect vulnerabilities.",
+      "effect": "Treat Impotence by attaching above its Disorder card.",
+      "targets": [
+        "own_matching_disorder"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "own_psyche_contains_matching_disorder"
+      ],
+      "sideEffects": [
+        "anxiety"
+      ],
+      "episodeEffect": null,
+      "persistent": true,
+      "destination": "attached_to_own_disorder",
+      "treats": [
+        "impotence"
+      ],
+      "ingredientReportedInHistoricalWiki": "Sildenafil",
+      "ingredientNote": "Secondary historical spelling preserved as reported; not a verified retail label or medical claim.",
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text and ingredient spelling in selected printing",
+        "UNKNOWN — NEEDS VERIFICATION: stacking prohibition / already-treated target"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P04",
+        "P12",
+        "PH05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R15",
+        "R16",
+        "R34"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "sideEffects": "verified",
+        "ingredient": "inferred",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "anorexia",
+      "name": "Anorexia",
+      "type": "disorder",
+      "edition": "retail_base_89_provisional",
+      "description": "Public Psyche condition; a hand copy can be used for a vulnerability attack.",
+      "effect": "Add this Disorder to an eligible opponent's Psyche.",
+      "targets": [
+        "opponent_player"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "target_has_attached_drug_listing_this_disorder",
+        "target_psyche_lacks_this_name"
+      ],
+      "sideEffects": [],
+      "episodeEffect": "Victim cannot draw cards for one round.",
+      "episode": {
+        "kind": "block_draw_round",
+        "verification": "verified",
+        "timingVerification": "unknown"
+      },
+      "persistent": true,
+      "destination": "target_psyche",
+      "treatments": [
+        "therapy"
+      ],
+      "therapyAllowed": true,
+      "copies": {
+        "historical95": 4,
+        "historicalVerification": "inferred",
+        "retail89": 4,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal text in selected retail printing",
+        "UNKNOWN — NEEDS VERIFICATION: expiry, stacking, curing-source behavior"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/12.png?v=1778021197&width=900",
+      "sources": [
+        "P12",
+        "P04",
+        "P05",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R35",
+        "R17",
+        "R19"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "name": "verified",
+        "effect": "verified",
+        "episodeEffect": "verified",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "therapy",
+      "name": "Therapy",
+      "type": "therapy",
+      "edition": "retail_base_89_provisional",
+      "description": "Removal treatment for an untreated non-Tremors Disorder.",
+      "effect": "Discard one own untreated Disorder other than Tremors together with this Therapy.",
+      "targets": [
+        "own_untreated_non_tremors_disorder"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "target_untreated",
+        "target_not_tremors"
+      ],
+      "sideEffects": [],
+      "episodeEffect": null,
+      "persistent": false,
+      "destination": "discard_with_target_disorder",
+      "treats": [
+        "madness",
+        "suicidal_thoughts",
+        "depression",
+        "gambling_addiction",
+        "anxiety",
+        "impotence",
+        "anorexia"
+      ],
+      "copies": {
+        "historical95": 5,
+        "historicalVerification": "inferred",
+        "retail89": 5,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: full literal printed card text"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/11.png?v=1778021187&width=900",
+      "sources": [
+        "P05",
+        "P06",
+        "P11",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R20",
+        "R21",
+        "R22"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "effect": "verified",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "episode",
+      "name": "You're Having an Episode",
+      "type": "episode",
+      "edition": "retail_base_89_provisional",
+      "description": "Trigger a printed punishment on one untreated opponent Disorder.",
+      "effect": "Resolve the selected Disorder's Episode effect, then discard this card.",
+      "targets": [
+        "opponent_untreated_disorder"
+      ],
+      "requirements": [
+        "own_turn",
+        "card_in_own_hand",
+        "play_budget_available",
+        "target_is_opponent",
+        "target_untreated"
+      ],
+      "sideEffects": [],
+      "episodeEffect": "delegates_to_target_disorder",
+      "persistent": false,
+      "destination": "discard_after_resolution",
+      "copies": {
+        "historical95": 10,
+        "historicalVerification": "inferred",
+        "retail89": 10,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: literal card text",
+        "UNKNOWN — NEEDS VERIFICATION: precise timing policies delegated to individual effects"
+      ],
+      "source": "https://pillboxgames.com/cdn/shop/files/7.png?v=1778021009&width=900",
+      "sources": [
+        "P06",
+        "P07",
+        "P11",
+        "PH03",
+        "B01",
+        "R01S"
+      ],
+      "ruleIds": [
+        "R23",
+        "R24"
+      ],
+      "verification": "verified",
+      "fieldVerification": {
+        "effect": "verified",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      }
+    },
+    {
+      "id": "misdiagnosis",
+      "name": "Misdiagnosis",
+      "type": "historical_special",
+      "edition": "historical95_bonus_only",
+      "description": "Historical reports exchange an own Psyche Disorder with one from hand. Destination differs between older review and current expansion description.",
+      "effect": null,
+      "reportedEffect": "Historical reports exchange an own Psyche Disorder with one from hand. Destination differs between older review and current expansion description.",
+      "targets": null,
+      "requirements": null,
+      "sideEffects": null,
+      "episodeEffect": null,
+      "persistent": null,
+      "destination": null,
+      "copies": {
+        "historical95": 3,
+        "historicalVerification": "inferred",
+        "retail89": 0,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: original historical card face and full resolution requirements"
+      ],
+      "source": "https://boardgamegeek.com/thread/1960411/a-sick-tic-tac-toe-like-card-game-a-review-of-side",
+      "sources": [
+        "B01",
+        "B02",
+        "R01S",
+        "E01"
+      ],
+      "ruleIds": [
+        "R52"
+      ],
+      "verification": "unknown",
+      "fieldVerification": {
+        "name": "inferred",
+        "effect": "unknown",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      },
+      "enabledForBaseline": false
+    },
+    {
+      "id": "high_tolerance",
+      "name": "High Tolerance",
+      "type": "historical_special",
+      "edition": "historical95_bonus_only",
+      "description": "Historical reports and current expansion describe removing one opponent's attached Drug. Historical exact restrictions and destinations remain unverified.",
+      "effect": null,
+      "reportedEffect": "Historical reports and current expansion describe removing one opponent's attached Drug. Historical exact restrictions and destinations remain unverified.",
+      "targets": null,
+      "requirements": null,
+      "sideEffects": null,
+      "episodeEffect": null,
+      "persistent": null,
+      "destination": null,
+      "copies": {
+        "historical95": 3,
+        "historicalVerification": "inferred",
+        "retail89": 0,
+        "retailVerification": "inferred"
+      },
+      "cardText": null,
+      "missingInformation": [
+        "UNKNOWN — NEEDS VERIFICATION: original historical card face and full resolution requirements"
+      ],
+      "source": "https://boardgamegeek.com/thread/1960411/a-sick-tic-tac-toe-like-card-game-a-review-of-side",
+      "sources": [
+        "B01",
+        "B02",
+        "R01S",
+        "E01"
+      ],
+      "ruleIds": [
+        "R52"
+      ],
+      "verification": "unknown",
+      "fieldVerification": {
+        "name": "inferred",
+        "effect": "unknown",
+        "literalCardText": "unknown",
+        "copies": "inferred"
+      },
+      "enabledForBaseline": false
+    }
+  ]
+}

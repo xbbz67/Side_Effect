@@ -1,0 +1,36 @@
+{
+  "environment": "Playwright headless Chromium, software WebGL; not a hardware performance certification",
+  "baseline": {
+    "elements": 102,
+    "canvases": 0,
+    "images": 0
+  },
+  "graphics": {
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "vendor": "Google Inc. (Google)"
+  },
+  "cycles": [
+    {
+      "elements": 102,
+      "canvases": 0,
+      "images": 0
+    },
+    {
+      "elements": 102,
+      "canvases": 0,
+      "images": 0
+    },
+    {
+      "elements": 102,
+      "canvases": 0,
+      "images": 0
+    }
+  ],
+  "frameSample": {
+    "frames": 32,
+    "averageMs": 50.06,
+    "averageRafFps": 20,
+    "worstMs": 233.3
+  },
+  "pageErrors": []
+}

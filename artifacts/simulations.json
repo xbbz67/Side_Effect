@@ -1,0 +1,32 @@
+[
+  {
+    "count": 100,
+    "wins": 100,
+    "caps": 0,
+    "errors": 0,
+    "maxTurns": 80,
+    "commands": 9154,
+    "seconds": 0.72,
+    "failures": []
+  },
+  {
+    "count": 1000,
+    "wins": 1000,
+    "caps": 0,
+    "errors": 0,
+    "maxTurns": 82,
+    "commands": 92110,
+    "seconds": 9.42,
+    "failures": []
+  },
+  {
+    "count": 10000,
+    "wins": 10000,
+    "caps": 0,
+    "errors": 0,
+    "maxTurns": 132,
+    "commands": 913809,
+    "seconds": 95.73,
+    "failures": []
+  }
+]

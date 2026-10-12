@@ -1,0 +1,21 @@
+import { test, expect } from '@playwright/test';
+test('hotseat players can privately offer cards off-turn', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/');
+  await page.getByLabel('Company').selectOption('hotseat');
+  await page.getByRole('button', { name: 'Take a seat' }).click();
+  await page.getByRole('button', { name: 'Draw 2 cards' }).click();
+  await page.getByRole('button', { name: 'Pass table', exact: true }).click();
+  await page.getByRole('dialog').getByRole('button', { name: 'Mara', exact: true }).click();
+  await expect(page.getByRole('group', { name: /Your hand/ })).toHaveCount(0);
+  await page.getByRole('button', { name: "I'm ready — show my hand" }).click();
+  const hand = page.getByRole('group', { name: /Your hand/ });
+  await expect(hand.getByRole('button')).toHaveCount(4);
+  await expect(page.getByRole('button', { name: 'End turn', exact: true })).toHaveCount(0);
+  await hand.getByRole('button').first().click();
+  await page.getByRole('button', { name: 'Give card', exact: true }).click();
+  await page.getByRole('dialog').getByRole('button', { name: 'You', exact: true }).click();
+  await page.getByRole('button', { name: "I'm ready — show my hand" }).click();
+  await expect(hand.getByRole('button')).toHaveCount(7);
+  await expect(page.getByRole('button', { name: 'End turn', exact: true })).toBeDisabled();
+});

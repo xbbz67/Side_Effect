@@ -1,0 +1,55 @@
+import { test, expect } from '@playwright/test';
+import { handLayout } from '../src/renderer/layout/OpponentLayoutManager';
+test('canvas drag treats a legal Disorder and invalid drop cancels safely', async ({ page }) => {
+  const errors: string[] = [];
+  page.on('pageerror', (e) => errors.push(e.message));
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/');
+  await page.getByLabel('Company').selectOption('hotseat');
+  await page.getByRole('button', { name: 'Take a seat' }).click();
+  await page.getByRole('button', { name: 'Draw 2 cards' }).click();
+  const hand = page.getByRole('group', { name: /Your hand/ });
+  await expect(hand.getByRole('button')).toHaveCount(6);
+  const fan = handLayout(6);
+  const i = 4;
+  await page.mouse.move(fan[i].x, fan[i].y - 30);
+  await page.mouse.down();
+  await page.mouse.move(726, 710, { steps: 12 });
+  await page.mouse.up();
+  await expect(page.locator('.turn-badge')).toContainText('1 / 2 plays');
+  await expect(hand.getByRole('button')).toHaveCount(5);
+  const f = handLayout(5);
+  await page.mouse.move(f[0].x, f[0].y);
+  await page.mouse.down();
+  await page.mouse.move(480, 470, { steps: 8 });
+  await page.mouse.up();
+  await expect(hand.getByRole('button')).toHaveCount(5);
+  await page.keyboard.press('Escape');
+  expect(errors).toEqual([]);
+});
+for (const count of [2, 3, 4, 5, 6, 7, 8])
+  test(`${count} players render and remain playable`, async ({ page }) => {
+    await page.setViewportSize({ width: 1366, height: 768 });
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.goto('/');
+    await page.getByRole('button', { name: String(count), exact: true }).click();
+    await page.getByLabel('Company').selectOption('hotseat');
+    await page.getByRole('button', { name: 'Take a seat' }).click();
+    await page.getByRole('button', { name: 'Draw 2 cards' }).click();
+    await expect(page.getByRole('group', { name: /Your hand/ }).getByRole('button')).toHaveCount(6);
+    await expect(page.locator('.table-footer')).toContainText(`${count} players`);
+    if (count === 8) await page.screenshot({ path: 'artifacts/eight-player-table.png' });
+  });
+test('leaving while an animation runs destroys the canvas and old queue', async ({ page }) => {
+  const errors: string[] = [];
+  page.on('pageerror', (e) => errors.push(e.message));
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Take a seat' }).click();
+  await page.getByRole('button', { name: 'Draw 2 cards' }).click();
+  await page.getByRole('button', { name: 'SIDE EFFECTS' }).click();
+  await page.getByRole('button', { name: 'Leave without saving' }).click();
+  await expect(page.locator('canvas')).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Take a seat' })).toBeVisible();
+  await page.waitForTimeout(400);
+  expect(errors).toEqual([]);
+});

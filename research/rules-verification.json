@@ -1,0 +1,543 @@
+{
+  "method": "Tracked physical-rule claims; digital proposals excluded",
+  "rules": [
+    {
+      "id": "R01",
+      "claim": "2–8 player support",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P00"
+      ]
+    },
+    {
+      "id": "R02",
+      "claim": "10–30 minute publisher duration",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P00"
+      ]
+    },
+    {
+      "id": "R03",
+      "claim": "Current retail box has 89 cards and one booklet",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P00",
+        "PH02"
+      ]
+    },
+    {
+      "id": "R04",
+      "claim": "Four standard categories: Disorder, Drug, Episode, Therapy",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P02"
+      ]
+    },
+    {
+      "id": "R05",
+      "claim": "Four starting Disorders at 2–5 seats; three at 6–8",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P02"
+      ]
+    },
+    {
+      "id": "R06",
+      "claim": "Separate and shuffle Disorders before setup dealing",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P02"
+      ]
+    },
+    {
+      "id": "R07",
+      "claim": "Duplicate setup Disorder goes to bottom; try next",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P03"
+      ]
+    },
+    {
+      "id": "R08",
+      "claim": "Remaining Disorders rejoin deck; four hidden hand cards each",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P03"
+      ]
+    },
+    {
+      "id": "R09",
+      "claim": "Face-up discard next to face-down draw pile",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P03"
+      ]
+    },
+    {
+      "id": "R10",
+      "claim": "Clockwise turns; latest nightmare starts",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P03"
+      ]
+    },
+    {
+      "id": "R11",
+      "claim": "Ordinary turn begins with two drawn cards",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P03"
+      ]
+    },
+    {
+      "id": "R12",
+      "claim": "Zero to two card plays per turn; may finish early",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P03",
+        "P07"
+      ]
+    },
+    {
+      "id": "R13",
+      "claim": "End own turn with no more than six hand cards",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P03"
+      ]
+    },
+    {
+      "id": "R14",
+      "claim": "Hand discards do not consume the two plays; reshuffle discard when draw exhausted",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P07"
+      ]
+    },
+    {
+      "id": "R15",
+      "claim": "Matching Drug placed on own Disorder",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P04"
+      ]
+    },
+    {
+      "id": "R16",
+      "claim": "Drug remains above treated Disorder",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P04",
+        "PH04"
+      ]
+    },
+    {
+      "id": "R17",
+      "claim": "Opponent supplies a Disorder from hand when target Drug lists it",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P04",
+        "P05"
+      ]
+    },
+    {
+      "id": "R18",
+      "claim": "Player without Drugs has no vulnerability to new Disorders",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P05"
+      ]
+    },
+    {
+      "id": "R19",
+      "claim": "No same-name Psyche duplicates, including treated Disorders",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P05"
+      ]
+    },
+    {
+      "id": "R20",
+      "claim": "Therapy discards itself and one own untreated Disorder",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P05",
+        "P11"
+      ]
+    },
+    {
+      "id": "R21",
+      "claim": "Tremors cannot receive Therapy",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P06"
+      ]
+    },
+    {
+      "id": "R22",
+      "claim": "Anorexia has no Drug",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P06"
+      ]
+    },
+    {
+      "id": "R23",
+      "claim": "Episode targets one opponent untreated Disorder and activates its punishment",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P06",
+        "P07"
+      ]
+    },
+    {
+      "id": "R24",
+      "claim": "Victim must comply; Episode discarded after use",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P07"
+      ]
+    },
+    {
+      "id": "R25",
+      "claim": "No card plays outside own turn in baseline",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P08"
+      ]
+    },
+    {
+      "id": "R26",
+      "claim": "Hand gifts/transfers permitted outside own turn; no extra plays",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P08"
+      ]
+    },
+    {
+      "id": "R27",
+      "claim": "Fully treated Psyche wins; optional continuation mentioned",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P03",
+        "P07"
+      ]
+    },
+    {
+      "id": "R28",
+      "claim": "Madness Episode removes attached Drugs; matching Drug exposes Tremors",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P09",
+        "P12"
+      ]
+    },
+    {
+      "id": "R29",
+      "claim": "Suicidal Thoughts Episode empties hand; matching Drug exposes Madness",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P12"
+      ]
+    },
+    {
+      "id": "R30",
+      "claim": "Depression Episode sits out one round; Drug exposes Suicidal Thoughts/Impotence/Anorexia",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P12"
+      ]
+    },
+    {
+      "id": "R31",
+      "claim": "Tremors Episode timed three-card discard or entire hand; Drug exposes Gambling/Depression/Madness",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P12"
+      ]
+    },
+    {
+      "id": "R32",
+      "claim": "Gambling Episode optionally takes three random hand cards; Drug exposes Impotence",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P12"
+      ]
+    },
+    {
+      "id": "R33",
+      "claim": "Anxiety Episode reveals hand to inflictor who may take one; Drug exposes Suicidal Thoughts/Depression/Madness",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P12"
+      ]
+    },
+    {
+      "id": "R34",
+      "claim": "Impotence Episode prevents card plays one round; Drug exposes Anxiety",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P12"
+      ]
+    },
+    {
+      "id": "R35",
+      "claim": "Anorexia Episode prevents draws one round; no Drug relationship",
+      "status": "verified",
+      "confidence": "high",
+      "sources": [
+        "P12"
+      ]
+    },
+    {
+      "id": "R36",
+      "claim": "Retail per-name copy counts equal historical profile minus six bonuses",
+      "status": "inferred",
+      "confidence": "medium",
+      "sources": [
+        "B01",
+        "R01S"
+      ],
+      "unknownId": "U01"
+    },
+    {
+      "id": "R37",
+      "claim": "Newly received Disorder does not automatically trigger punishment",
+      "status": "inferred",
+      "confidence": "medium",
+      "sources": [
+        "P04",
+        "P06"
+      ],
+      "unknownId": "U15"
+    },
+    {
+      "id": "R38",
+      "claim": "Immediately acquired untreated Disorder can receive second-play Episode",
+      "status": "inferred",
+      "confidence": "medium",
+      "sources": [
+        "P06",
+        "P07"
+      ],
+      "unknownId": "U15"
+    },
+    {
+      "id": "R39",
+      "claim": "Empty Psyche after final Therapy wins",
+      "status": "inferred",
+      "confidence": "medium",
+      "sources": [
+        "P03",
+        "P11"
+      ],
+      "unknownId": "U10"
+    },
+    {
+      "id": "R40",
+      "claim": "Single Drug attachment per Disorder; no treatment stacking",
+      "status": "inferred",
+      "confidence": "medium",
+      "sources": [
+        "P04",
+        "PH04"
+      ],
+      "unknownId": "U09"
+    },
+    {
+      "id": "R41",
+      "claim": "Drug vulnerabilities union across attached Drugs",
+      "status": "inferred",
+      "confidence": "medium",
+      "sources": [
+        "P04",
+        "P05"
+      ],
+      "unknownId": "U15"
+    },
+    {
+      "id": "R42",
+      "claim": "Fully resolved action is the immediate victory-check boundary",
+      "status": "inferred",
+      "confidence": "medium",
+      "sources": [
+        "P03",
+        "P07",
+        "B03"
+      ],
+      "unknownId": "U10"
+    },
+    {
+      "id": "R43",
+      "claim": "Exact meaning/expiry of one round",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "P12"
+      ],
+      "unknownId": "U02"
+    },
+    {
+      "id": "R44",
+      "claim": "Repeated Episode restrictions stack, refresh, or overlap",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "P12"
+      ],
+      "unknownId": "U03"
+    },
+    {
+      "id": "R45",
+      "claim": "Curing source Disorder ends or preserves an existing restriction",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "P11",
+        "P12"
+      ],
+      "unknownId": "U04"
+    },
+    {
+      "id": "R46",
+      "claim": "Tremors fewer-than-three hand and timer start/latency behavior",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "P12"
+      ],
+      "unknownId": "U05"
+    },
+    {
+      "id": "R47",
+      "claim": "Gambling theft from fewer-than-three cards and optional count",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "P12"
+      ],
+      "unknownId": "U06"
+    },
+    {
+      "id": "R48",
+      "claim": "Voluntary discard timing beyond own-turn cleanup",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "P07"
+      ],
+      "unknownId": "U07"
+    },
+    {
+      "id": "R49",
+      "claim": "Hand transfers during pending punishments; off-turn over-limit cleanup",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "P08",
+        "P03"
+      ],
+      "unknownId": "U08"
+    },
+    {
+      "id": "R50",
+      "claim": "Both draw and discard piles empty",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "P07"
+      ],
+      "unknownId": "U11"
+    },
+    {
+      "id": "R51",
+      "claim": "Ordered recycling/discard placement and setup dealing order",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "P03",
+        "P07"
+      ],
+      "unknownId": "U12"
+    },
+    {
+      "id": "R52",
+      "claim": "Precise historical Misdiagnosis/High Tolerance wording and destinations",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "B02",
+        "E01"
+      ],
+      "unknownId": "U13"
+    },
+    {
+      "id": "R53",
+      "claim": "Continuation after first winner: card disposition / elimination / targeting",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "P03"
+      ],
+      "unknownId": "U14"
+    },
+    {
+      "id": "R54",
+      "claim": "Complete literal printed card wording / ingredients in chosen retail printing",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "P12",
+        "PH05",
+        "B01"
+      ],
+      "unknownId": "U16"
+    },
+    {
+      "id": "R55",
+      "claim": "Spectator and historical hand-reveal information permissions",
+      "status": "unknown",
+      "confidence": "low",
+      "sources": [
+        "P03",
+        "P12"
+      ],
+      "unknownId": "U17"
+    }
+  ]
+}

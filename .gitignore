@@ -1,0 +1,21 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+.sites-runtime/
+*.tsbuildinfo
+
+# Local credentials and editor/runtime files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+
+# Downloaded third-party references remain local research evidence.
+research/evidence/*
+!research/evidence/README.md
+!research/evidence/inspect-video.cjs
+!research/evidence/fetch-video-evidence.ps1
